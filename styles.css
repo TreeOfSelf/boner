@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+#canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#canvasUI {
+    z-index: 10;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.window {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 400px;
+    height: 400px;
+    background-color: rgba(93, 93, 93, 0.5);
+    z-index: 15;
+    display: none;
+}
+
+.title-bar {
+    background-color: #2b2b2b;
+    border-bottom: 0px solid #505050;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.title {
+    font-weight: bold;
+}
+
+.close-button {
+    background-color: rgb(255, 0, 0);
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    transform:translateX(10px);
+}
+
+.resize-handle {
+    width: 10px;
+    height: 10px;
+    background-color: #2e2e2e;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    cursor: se-resize;
+}
+
+.content {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.column {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.full_column {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.column .input-group {
+    margin-bottom: 20px; /* Increase vertical spacing between input groups */
+}
+
+.content label {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: rgb(60, 60, 60);
+    padding: 5px;
+}
+
+.content label button {
+    position: absolute;
+    right: 5%;
+    background-color: rgb(101, 101, 101);
+    color: white;
+}
+
+* {
+    user-select: none;
+}
+
+/* Allow user selection on input elements */
+input {
+    user-select: text; /* Allow text selection */
+    accent-color: #454545;
+}
+
+#settingsDiv {
+    width: 250px;
+    left:50%;
+}

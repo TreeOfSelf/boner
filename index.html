@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bone</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="settingsDiv" class="window">
+        <div class="title-bar">
+            <span class="title">Settings</span>
+            <button class="close-button">X</button>
+        </div>
+        <div class="content">
+            <div class="full_column">
+            <label for="overlay_opacity">Overlay Opacity:</label>
+            <input type="range" id="settings_overlay_opacity" min="1" max="100" value="100"><br>
+            <label for="resolution">Resolution:</label>
+            <input type="range" id="settings_resolution" min="1" max="100" value="100"><br>
+            </div>
+        </div>
+        <div class="resize-handle"></div>
+    </div>
+
+
+    <div id="boneDiv" class="window">
+        <div class="title-bar">
+            <span class="title">Bone Editor</span>
+            <button class="close-button">X</button>
+        </div>
+        <div class="content">
+
+            <div class="column">
+            <label for="angle">Angle:</label>
+            <input type="number" id="boneDiv_angle" step="1"><br>
+    
+            <label for="length">Length:</label>
+            <input type="number" id="boneDiv_length" step="1"><br>
+    
+            <label for="x">X:</label>
+            <input type="number" id="boneDiv_x" step="1"><br>
+    
+            <label for="y">Y:</label>
+            <input type="number" id="boneDiv_y" step="1"><br>
+
+            <label for="z">Z:</label>
+            <input type="number" id="boneDiv_z" step="1"><br>
+            </div>
+            
+            <div class="column">
+            <label for="fixed">Fixed:</label>
+            <input type="checkbox" id="boneDiv_fixed"><br>
+
+            <label for="flipped">Flipped:</label>
+            <input type="checkbox" id="boneDiv_flipped"><br>
+    
+            <label for="image">Image:</label>
+            <select id="boneDiv_image">
+
+                <!-- Add more options as needed -->
+            </select><br>
+    
+            <label for="imageOffset">Offset:<button id="boneDiv_imageOffsetButton">Set</button></label>
+            <input id="boneDiv_imageOffset" disabled><br>
+    
+            <label for="imageOffsetRotation">Rotation:</label>
+            <input type="number" id="boneDiv_imageOffsetRotation" step="5"><br>
+            </div>
+        </div>
+        <div class="resize-handle"></div>
+    </div>
+
+    <canvas id="canvasUI" width="800" height="800"></canvas>
+    <canvas id="canvas" width="800" height="800"></canvas>
+    <script type="text/javascript" src="lib/lib.js"></script>
+    
+    <script type="text/javascript" src="control/windows.js"></script>
+    <script type="text/javascript" src="control/boneWindow.js"></script>
+    <script type="text/javascript" src="control/settingsWindow.js"></script>
+    <script type="text/javascript" src="control/selection.js"></script>
+    <script type="text/javascript" src="control/keyboard.js"></script>
+    
+
+    <script type="text/javascript" src="render/renderBoiler.js"></script>
+    <script type="text/javascript" src="render/renderBone.js"></script>
+    <script type="text/javascript" src="render/renderSprite.js"></script>
+    <script type="text/javascript" src="render/renderBuffers.js"></script>
+    <script type="text/javascript" src="render/renderShaders.js"></script>
+    <script type="text/javascript" src="render/renderMain.js"></script>
+
+    
+</body>
+</html>
